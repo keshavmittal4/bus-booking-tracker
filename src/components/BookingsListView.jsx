@@ -1,4 +1,3 @@
-// src/components/list/BookingsListView.jsx
 import React, { useState, useMemo, useEffect } from "react";
 import {
   ChevronUp,
@@ -222,7 +221,7 @@ const BookingsListView = ({
     return filteredBookings.slice(startIndex, startIndex + bookingsPerPage);
   }, [filteredBookings, currentPage, bookingsPerPage]);
 
-  // Reset pagination on filter/sort change
+  // resetting pagination on filter/sort change
   useEffect(() => {
     setCurrentPage(1);
   }, [filters, sortConfig]);
@@ -274,7 +273,6 @@ const BookingsListView = ({
               : "bg-blue-600 text-white hover:bg-blue-700"
           }`}
           target="_blank"
-          // Prevent download if data is empty
           onClick={(event) => {
             if (csvData.length === 0) {
               event.preventDefault();

@@ -1,5 +1,3 @@
-// src/utils/constants.js
-
 export const SOURCE_OPTIONS = [
     { id: 'all', name: 'All Sources' },
     { id: 'mmt', name: 'MakeMyTrip' },

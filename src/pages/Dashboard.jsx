@@ -66,7 +66,7 @@ const DashboardView = ({ analyticsData }) => {
                 {/* Chart 2: Bookings by Source (Pie Chart) */}
                 <ChartCard title="Bookings Distribution by Source">
                     <ResponsiveContainer width="100%" height={300}>
-                        <PieChart>
+                        <PieChart className=''>
                             <Pie
                                 data={bookingsBySource}
                                 dataKey="value"
@@ -83,13 +83,13 @@ const DashboardView = ({ analyticsData }) => {
                                 ))}
                             </Pie>
                             <Tooltip contentStyle={{ borderRadius: '8px', fontSize: '12px' }} />
-                            <Legend layout="vertical" verticalAlign="bottom" align="left" wrapperStyle={{ paddingLeft: '20px' }} />
+                            {/* <Legend layout="vertical" verticalAlign="bottom" align="left" wrapperStyle={{ paddingLeft: '10px' }} /> */}
                         </PieChart>
                     </ResponsiveContainer>
                 </ChartCard>
 
                 {/* Chart 3: Time of Day Distribution */}
-                <ChartCard title="Bookings by Time Window (Histogram)">
+                <ChartCard title="Bookings by Time Window">
                     <ResponsiveContainer width="100%" height={300}>
                         <BarChart data={timeDistribution} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />

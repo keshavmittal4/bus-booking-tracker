@@ -1,4 +1,3 @@
-// src/components/list/BookingDetailModal.jsx
 import React from 'react';
 import { Users, Bus, MapPin, DollarSign, Calendar, Clock, ListChecks, X } from 'lucide-react';
 import { formatCurrency, formatDate, formatTime } from '../utils/formatter.jsx';
@@ -20,7 +19,7 @@ const BookingDetailModal = ({ booking, onClose }) => {
     const sourceDetails = SOURCE_OPTIONS.find(s => s.id === booking.source);
     const sourceName = sourceDetails ? sourceDetails.name : 'Unknown';
     const sourceColor = COLORS[booking.source] || '#6B7280';
-    const sourceColorClass = `text-${sourceColor.replace('#', '')}`; // Simplified for Tailwind JIT
+    const sourceColorClass = `text-${sourceColor.replace('#', '')}`;
 
     return (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
