@@ -213,7 +213,7 @@ const BookingsListView = ({
   exportToCSV,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const bookingsPerPage = 10;
+  const bookingsPerPage = 15;
   const totalPages = Math.ceil(filteredBookings.length / bookingsPerPage);
 
   const paginatedBookings = useMemo(() => {
